@@ -109,7 +109,6 @@ Emojis are allowed 😊
         let grammar = Grammar.test.test05
         grammar.shouldDebug = true
         editor = Editor(textView: textView, grammar: grammar, theme: theme)
-        textView.sayHello()
     }
     
     override var representedObject: Any? {
