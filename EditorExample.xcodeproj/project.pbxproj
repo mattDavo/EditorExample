@@ -17,6 +17,7 @@
 		345091E423A9CB3600145BB9 /* EditorUI in Frameworks */ = {isa = PBXBuildFile; productRef = 345091E323A9CB3600145BB9 /* EditorUI */; };
 		345091E623A9CB3600145BB9 /* EditorDemo in Frameworks */ = {isa = PBXBuildFile; productRef = 345091E523A9CB3600145BB9 /* EditorDemo */; };
 		345091E823A9CB3600145BB9 /* EditorCore in Frameworks */ = {isa = PBXBuildFile; productRef = 345091E723A9CB3600145BB9 /* EditorCore */; };
+		345091EB23A9D0C000145BB9 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 345091EA23A9D0C000145BB9 /* README.md */; };
 		346B8283239CA42E00D142E6 /* AdobeBlank.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 346B8282239CA42E00D142E6 /* AdobeBlank.ttf */; };
 /* End PBXBuildFile section */
 
@@ -53,6 +54,7 @@
 		343FED462397372F00612A26 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		344E81EA239C6DEE00729654 /* WindowController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WindowController.swift; sourceTree = "<group>"; };
 		345091E923A9CB6300145BB9 /* Editor */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Editor; path = ../Editor; sourceTree = "<group>"; };
+		345091EA23A9D0C000145BB9 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		346B8282239CA42E00D142E6 /* AdobeBlank.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = AdobeBlank.ttf; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -91,8 +93,9 @@
 				343FED252397372D00612A26 /* EditorExample */,
 				343FED382397372E00612A26 /* EditorExampleTests */,
 				343FED432397372F00612A26 /* EditorExampleUITests */,
-				343FED242397372D00612A26 /* Products */,
 				343FED532397387F00612A26 /* Frameworks */,
+				343FED242397372D00612A26 /* Products */,
+				345091EA23A9D0C000145BB9 /* README.md */,
 			);
 			sourceTree = "<group>";
 		};
@@ -268,6 +271,7 @@
 			files = (
 				343FED2B2397372E00612A26 /* Assets.xcassets in Resources */,
 				346B8283239CA42E00D142E6 /* AdobeBlank.ttf in Resources */,
+				345091EB23A9D0C000145BB9 /* README.md in Resources */,
 				343FED2E2397372E00612A26 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
