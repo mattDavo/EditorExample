@@ -1,0 +1,16 @@
+{
+  "object": {
+    "pins": [
+      {
+        "package": "Editor",
+        "repositoryURL": "https://github.com/mattDavo/Editor",
+        "state": {
+          "branch": "reorg",
+          "revision": "3584560a6089154f534c462b2eb0b55ed6f56ad4",
+          "version": null
+        }
+      }
+    ]
+  },
+  "version": 1
+}
