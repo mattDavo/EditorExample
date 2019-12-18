@@ -3,10 +3,10 @@
     "pins": [
       {
         "package": "Editor",
-        "repositoryURL": "https://github.com/mattDavo/Editor",
+        "repositoryURL": "https://github.com/mattDavo/Editor.git",
         "state": {
-          "branch": "reorg",
-          "revision": "3584560a6089154f534c462b2eb0b55ed6f56ad4",
+          "branch": "master",
+          "revision": "e7716a653fb06812846e202c4e58e89536902587",
           "version": null
         }
       }

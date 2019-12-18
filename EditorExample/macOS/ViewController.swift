@@ -7,70 +7,7 @@
 //
 
 import Cocoa
-import EditorCore
-import EditorDemo
 import EditorUI
-
-let theme = Theme(name: "basic", settings: [
-    ThemeSetting(scope: "comment", parentScopes: [], attributes: [
-        ColorThemeAttribute(color: .systemGreen)
-    ]),
-    ThemeSetting(scope: "constant", parentScopes: [], attributes: []),
-    ThemeSetting(scope: "entity", parentScopes: [], attributes: []),
-    ThemeSetting(scope: "invalid", parentScopes: [], attributes: []),
-    ThemeSetting(scope: "keyword", parentScopes: [], attributes: [
-        ColorThemeAttribute(color: .systemBlue)
-    ]),
-    ThemeSetting(scope: "markup", parentScopes: [], attributes: []),
-    ThemeSetting(scope: "storage", parentScopes: [], attributes: []),
-    ThemeSetting(scope: "string", parentScopes: [], attributes: [
-        ColorThemeAttribute(color: .systemRed)
-    ]),
-    ThemeSetting(scope: "support", parentScopes: [], attributes: []),
-    ThemeSetting(scope: "variable", parentScopes: [], attributes: []),
-    ThemeSetting(scope: "source", parentScopes: [], attributes: [
-        ColorThemeAttribute(color: .textColor),
-        FontThemeAttribute(font: .monospacedSystemFont(ofSize: 18)),
-        LineHeightThemeAttribute(min: 30, max: 30),
-        FirstLineHeadIndentThemeAttribute(value: 30),
-        TailIndentThemeAttribute(value: -30),
-        HeadIndentThemeAttribute(value: 30)
-    ]),
-    ThemeSetting(scope: "comment.keyword", parentScopes: [], attributes: [
-        ColorThemeAttribute(color: .systemTeal)
-    ]),
-    ThemeSetting(scope: "markup.bold", parentScopes: [], attributes: [
-        BoldThemeAttribute()
-    ]),
-    ThemeSetting(scope: "markup.italic", parentScopes: [], attributes: [
-        ItalicThemeAttribute()
-    ]),
-    ThemeSetting(scope: "markup.mono", parentScopes: [], attributes: [
-        BackgroundColorThemeAttribute(color: .gray, rounded: true),
-    ]),
-    ThemeSetting(scope: "action", parentScopes: [], attributes: [
-        ActionThemeAttribute(linkId: "test")
-    ]),
-    ThemeSetting(scope: "hidden", parentScopes: [], attributes: [
-        FontThemeAttribute(font: .hiddenFont())
-    ]),
-    ThemeSetting(scope: "markup.heading.1", parentScopes: [], attributes: [
-        FontThemeAttribute(font: .monospacedSystemFont(ofSize: 25)),
-        FirstLineHeadIndentThemeAttribute(value: 2)
-    ]),
-    ThemeSetting(scope: "markup.center", parentScopes: [], attributes: [
-        BackgroundColorThemeAttribute(color: NSColor.gray, rounded: true),
-        TextAlignmentThemeAttribute(value: .center)
-    ])
-])
-
-public extension Font {
-    
-    class func hiddenFont() -> Font {
-        return Font(name: "AdobeBlank", size: 10)!
-    }
-}
-
 
 class ViewController: NSViewController {
 
@@ -82,6 +19,8 @@ class ViewController: NSViewController {
         
         let lines = """
 # My Heading
+## Heading 2
+### Heading 3
 
 Keywords are dog, Dog, cat and Cat
 
@@ -106,9 +45,8 @@ Emojis are allowed 😊
         textView.string = lines
         textView.replace(lineNumberGutter: LineNumberGutter(withTextView: textView))
         
-        let grammar = Grammar.test.test05
-        grammar.shouldDebug = true
-        editor = Editor(textView: textView, grammar: grammar, theme: theme)
+        exampleGrammar.shouldDebug = true
+        editor = Editor(textView: textView, grammar: exampleGrammar, theme: exampleTheme)
     }
     
     override var representedObject: Any? {

@@ -14,11 +14,13 @@
 		343FED3A2397372E00612A26 /* EditorExampleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 343FED392397372E00612A26 /* EditorExampleTests.swift */; };
 		343FED452397372F00612A26 /* EditorExampleUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 343FED442397372F00612A26 /* EditorExampleUITests.swift */; };
 		344E81EB239C6DEE00729654 /* WindowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 344E81EA239C6DEE00729654 /* WindowController.swift */; };
-		345091E423A9CB3600145BB9 /* EditorUI in Frameworks */ = {isa = PBXBuildFile; productRef = 345091E323A9CB3600145BB9 /* EditorUI */; };
-		345091E623A9CB3600145BB9 /* EditorDemo in Frameworks */ = {isa = PBXBuildFile; productRef = 345091E523A9CB3600145BB9 /* EditorDemo */; };
-		345091E823A9CB3600145BB9 /* EditorCore in Frameworks */ = {isa = PBXBuildFile; productRef = 345091E723A9CB3600145BB9 /* EditorCore */; };
 		345091EB23A9D0C000145BB9 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 345091EA23A9D0C000145BB9 /* README.md */; };
 		346B8283239CA42E00D142E6 /* AdobeBlank.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 346B8282239CA42E00D142E6 /* AdobeBlank.ttf */; };
+		3480490A23A9D3D600CB83F2 /* EditorUI in Frameworks */ = {isa = PBXBuildFile; productRef = 3480490923A9D3D600CB83F2 /* EditorUI */; };
+		3480490E23A9D3D600CB83F2 /* EditorCore in Frameworks */ = {isa = PBXBuildFile; productRef = 3480490D23A9D3D600CB83F2 /* EditorCore */; };
+		3480491623A9D66000CB83F2 /* ExampleGrammar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3480491523A9D65F00CB83F2 /* ExampleGrammar.swift */; };
+		3480491923A9D67600CB83F2 /* ExampleTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3480491823A9D67600CB83F2 /* ExampleTheme.swift */; };
+		3480491B23A9D7C500CB83F2 /* Font+HiddentFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3480491A23A9D7C500CB83F2 /* Font+HiddentFont.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,9 +55,12 @@
 		343FED442397372F00612A26 /* EditorExampleUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditorExampleUITests.swift; sourceTree = "<group>"; };
 		343FED462397372F00612A26 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		344E81EA239C6DEE00729654 /* WindowController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WindowController.swift; sourceTree = "<group>"; };
-		345091E923A9CB6300145BB9 /* Editor */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Editor; path = ../Editor; sourceTree = "<group>"; };
 		345091EA23A9D0C000145BB9 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		346B8282239CA42E00D142E6 /* AdobeBlank.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = AdobeBlank.ttf; sourceTree = "<group>"; };
+		3480490F23A9D3E300CB83F2 /* Editor */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Editor; path = ../Editor; sourceTree = "<group>"; };
+		3480491523A9D65F00CB83F2 /* ExampleGrammar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExampleGrammar.swift; sourceTree = "<group>"; };
+		3480491823A9D67600CB83F2 /* ExampleTheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExampleTheme.swift; sourceTree = "<group>"; };
+		3480491A23A9D7C500CB83F2 /* Font+HiddentFont.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Font+HiddentFont.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,9 +68,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				345091E623A9CB3600145BB9 /* EditorDemo in Frameworks */,
-				345091E823A9CB3600145BB9 /* EditorCore in Frameworks */,
-				345091E423A9CB3600145BB9 /* EditorUI in Frameworks */,
+				3480490E23A9D3D600CB83F2 /* EditorCore in Frameworks */,
+				3480490A23A9D3D600CB83F2 /* EditorUI in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -89,7 +93,7 @@
 		343FED1A2397372D00612A26 = {
 			isa = PBXGroup;
 			children = (
-				345091E923A9CB6300145BB9 /* Editor */,
+				3480490F23A9D3E300CB83F2 /* Editor */,
 				343FED252397372D00612A26 /* EditorExample */,
 				343FED382397372E00612A26 /* EditorExampleTests */,
 				343FED432397372F00612A26 /* EditorExampleUITests */,
@@ -112,6 +116,7 @@
 		343FED252397372D00612A26 /* EditorExample */ = {
 			isa = PBXGroup;
 			children = (
+				3480491723A9D66500CB83F2 /* common */,
 				343FED52239737AB00612A26 /* macOS */,
 			);
 			path = EditorExample;
@@ -157,6 +162,16 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		3480491723A9D66500CB83F2 /* common */ = {
+			isa = PBXGroup;
+			children = (
+				3480491523A9D65F00CB83F2 /* ExampleGrammar.swift */,
+				3480491823A9D67600CB83F2 /* ExampleTheme.swift */,
+				3480491A23A9D7C500CB83F2 /* Font+HiddentFont.swift */,
+			);
+			path = common;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -174,9 +189,8 @@
 			);
 			name = "macOS Application";
 			packageProductDependencies = (
-				345091E323A9CB3600145BB9 /* EditorUI */,
-				345091E523A9CB3600145BB9 /* EditorDemo */,
-				345091E723A9CB3600145BB9 /* EditorCore */,
+				3480490923A9D3D600CB83F2 /* EditorUI */,
+				3480490D23A9D3D600CB83F2 /* EditorCore */,
 			);
 			productName = EditorExample;
 			productReference = 343FED232397372D00612A26 /* macOS Application.app */;
@@ -251,7 +265,7 @@
 			);
 			mainGroup = 343FED1A2397372D00612A26;
 			packageReferences = (
-				345091E223A9CB3600145BB9 /* XCRemoteSwiftPackageReference "Editor" */,
+				3480490823A9D3D600CB83F2 /* XCRemoteSwiftPackageReference "Editor" */,
 			);
 			productRefGroup = 343FED242397372D00612A26 /* Products */;
 			projectDirPath = "";
@@ -299,6 +313,9 @@
 			files = (
 				343FED292397372D00612A26 /* ViewController.swift in Sources */,
 				344E81EB239C6DEE00729654 /* WindowController.swift in Sources */,
+				3480491B23A9D7C500CB83F2 /* Font+HiddentFont.swift in Sources */,
+				3480491923A9D67600CB83F2 /* ExampleTheme.swift in Sources */,
+				3480491623A9D66000CB83F2 /* ExampleGrammar.swift in Sources */,
 				343FED272397372D00612A26 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -625,30 +642,25 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		345091E223A9CB3600145BB9 /* XCRemoteSwiftPackageReference "Editor" */ = {
+		3480490823A9D3D600CB83F2 /* XCRemoteSwiftPackageReference "Editor" */ = {
 			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/mattDavo/Editor";
+			repositoryURL = "https://github.com/mattDavo/Editor.git";
 			requirement = {
-				branch = reorg;
+				branch = master;
 				kind = branch;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		345091E323A9CB3600145BB9 /* EditorUI */ = {
+		3480490923A9D3D600CB83F2 /* EditorUI */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 345091E223A9CB3600145BB9 /* XCRemoteSwiftPackageReference "Editor" */;
+			package = 3480490823A9D3D600CB83F2 /* XCRemoteSwiftPackageReference "Editor" */;
 			productName = EditorUI;
 		};
-		345091E523A9CB3600145BB9 /* EditorDemo */ = {
+		3480490D23A9D3D600CB83F2 /* EditorCore */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 345091E223A9CB3600145BB9 /* XCRemoteSwiftPackageReference "Editor" */;
-			productName = EditorDemo;
-		};
-		345091E723A9CB3600145BB9 /* EditorCore */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 345091E223A9CB3600145BB9 /* XCRemoteSwiftPackageReference "Editor" */;
+			package = 3480490823A9D3D600CB83F2 /* XCRemoteSwiftPackageReference "Editor" */;
 			productName = EditorCore;
 		};
 /* End XCSwiftPackageProductDependency section */
