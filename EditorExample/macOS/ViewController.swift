@@ -41,12 +41,16 @@ _Italic_ *Bold* _Italic and *bold*_ *Bold and _italic_*
 
 Emojis are allowed 😊
 """
+        
+        let lines1 = ""
+        
         textView.insertionPointColor = .systemBlue
-        textView.string = lines
+        textView.string = lines1
         textView.replace(lineNumberGutter: LineNumberGutter(withTextView: textView))
         
         exampleGrammar.shouldDebug = true
-        editor = Editor(textView: textView, grammar: exampleGrammar, theme: exampleTheme)
+//        editor = Editor(textView: textView, grammar: exampleGrammar, theme: exampleTheme)
+        editor = Editor(textView: textView, grammar: readMeExampleGrammar, theme: readMeExampleTheme)
     }
     
     override var representedObject: Any? {

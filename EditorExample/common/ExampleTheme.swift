@@ -81,3 +81,24 @@ let exampleTheme = Theme(name: "basic", settings: [
         TextAlignmentThemeAttribute(value: .center)
     ])
 ])
+
+
+let readMeExampleTheme = Theme(name: "basic", settings: [
+    ThemeSetting(scope: "comment", parentScopes: [], attributes: [
+        ColorThemeAttribute(color: .systemGreen)
+    ]),
+    ThemeSetting(scope: "keyword", parentScopes: [], attributes: [
+        ColorThemeAttribute(color: .systemBlue)
+    ]),
+    ThemeSetting(scope: "string", parentScopes: [], attributes: [
+        ColorThemeAttribute(color: .systemRed)
+    ]),
+    ThemeSetting(scope: "source", parentScopes: [], attributes: [
+        ColorThemeAttribute(color: .textColor),
+        FontThemeAttribute(font: .monospacedSystemFont(ofSize: 18)),
+        TailIndentThemeAttribute(value: -30)
+    ]),
+    ThemeSetting(scope: "comment.keyword", parentScopes: [], attributes: [
+        ColorThemeAttribute(color: .systemTeal)
+    ])
+])

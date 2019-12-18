@@ -72,3 +72,30 @@ let exampleGrammar = Grammar(
         ])
     ])
 )
+
+
+let readMeExampleGrammar = Grammar(
+    scopeName: "source.example",
+    fileTypes: [],
+    patterns: [
+        MatchRule(name: "keyword.special.class", match: "\\bclass\\b"),
+        MatchRule(name: "keyword.special.let", match: "\\blet\\b"),
+        MatchRule(name: "keyword.special.var", match: "\\bvar\\b"),
+        BeginEndRule(
+            name: "string.quoted.double",
+            begin: "\"",
+            end: "\"",
+            patterns: [
+                MatchRule(name: "source.example", match: #"\\\(.*\)"#, captures: [
+                    Capture(patterns: [IncludeGrammarPattern()])
+                ])
+            ]
+        ),
+        BeginEndRule(name: "comment.line.double-slash", begin: "//", end: "\\n", patterns: [IncludeRulePattern(include: "todo")]),
+        BeginEndRule(name: "comment.block", begin: "/\\*", end: "\\*/", patterns: [IncludeRulePattern(include: "todo")])
+    ],
+    repository: Repository(patterns: [
+        "todo": MatchRule(name: "comment.keyword.todo", match: "TODO")
+    ])
+)
+
