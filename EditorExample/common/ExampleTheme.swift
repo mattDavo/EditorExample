@@ -37,6 +37,9 @@ let exampleTheme = Theme(name: "basic", settings: [
     ThemeSetting(scope: "string", parentScopes: [], attributes: [
         ColorThemeAttribute(color: .systemRed)
     ]),
+    ThemeSetting(scope: "string.content", parentScopes: [], attributes: [
+        ColorThemeAttribute(color: .systemOrange)
+    ]),
     ThemeSetting(scope: "support", parentScopes: [], attributes: []),
     ThemeSetting(scope: "variable", parentScopes: [], attributes: []),
     ThemeSetting(scope: "source", parentScopes: [], attributes: [

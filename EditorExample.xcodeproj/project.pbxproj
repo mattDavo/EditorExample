@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		343E2FDD23AB79350058AC7E /* BigText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 343E2FDC23AB79350058AC7E /* BigText.swift */; };
 		343FED272397372D00612A26 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 343FED262397372D00612A26 /* AppDelegate.swift */; };
 		343FED292397372D00612A26 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 343FED282397372D00612A26 /* ViewController.swift */; };
 		343FED2B2397372E00612A26 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 343FED2A2397372E00612A26 /* Assets.xcassets */; };
@@ -41,7 +42,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		343FED232397372D00612A26 /* macOS Application.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "macOS Application.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		343E2FDC23AB79350058AC7E /* BigText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BigText.swift; sourceTree = "<group>"; };
+		343FED232397372D00612A26 /* Editor Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Editor Example.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		343FED262397372D00612A26 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		343FED282397372D00612A26 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		343FED2A2397372E00612A26 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -106,7 +108,7 @@
 		343FED242397372D00612A26 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				343FED232397372D00612A26 /* macOS Application.app */,
+				343FED232397372D00612A26 /* Editor Example.app */,
 				343FED352397372E00612A26 /* macOS Application Unit Tests.xctest */,
 				343FED402397372F00612A26 /* macOS Application UI Tests.xctest */,
 			);
@@ -168,6 +170,7 @@
 				3480491523A9D65F00CB83F2 /* ExampleGrammar.swift */,
 				3480491823A9D67600CB83F2 /* ExampleTheme.swift */,
 				3480491A23A9D7C500CB83F2 /* Font+HiddentFont.swift */,
+				343E2FDC23AB79350058AC7E /* BigText.swift */,
 			);
 			path = common;
 			sourceTree = "<group>";
@@ -193,7 +196,7 @@
 				3480490D23A9D3D600CB83F2 /* EditorCore */,
 			);
 			productName = EditorExample;
-			productReference = 343FED232397372D00612A26 /* macOS Application.app */;
+			productReference = 343FED232397372D00612A26 /* Editor Example.app */;
 			productType = "com.apple.product-type.application";
 		};
 		343FED342397372E00612A26 /* macOS Application Unit Tests */ = {
@@ -315,6 +318,7 @@
 				344E81EB239C6DEE00729654 /* WindowController.swift in Sources */,
 				3480491B23A9D7C500CB83F2 /* Font+HiddentFont.swift in Sources */,
 				3480491923A9D67600CB83F2 /* ExampleTheme.swift in Sources */,
+				343E2FDD23AB79350058AC7E /* BigText.swift in Sources */,
 				3480491623A9D66000CB83F2 /* ExampleGrammar.swift in Sources */,
 				343FED272397372D00612A26 /* AppDelegate.swift in Sources */,
 			);
@@ -417,6 +421,7 @@
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "";
 				SDKROOT = macosx;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -470,6 +475,7 @@
 				MACOSX_DEPLOYMENT_TARGET = 10.14;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "";
 				SDKROOT = macosx;
 				SWIFT_COMPILATION_MODE = wholemodule;
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
@@ -490,8 +496,9 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
+				MARKETING_VERSION = 0.0.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.mattdavo.EditorExample.macos;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "Editor Example";
 				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
@@ -510,8 +517,9 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
+				MARKETING_VERSION = 0.0.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.mattdavo.EditorExample.macos;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "Editor Example";
 				SWIFT_VERSION = 5.0;
 			};
 			name = Release;

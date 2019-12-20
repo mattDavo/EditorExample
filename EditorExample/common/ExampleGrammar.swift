@@ -32,6 +32,7 @@ let exampleGrammar = Grammar(
             name: "string.quoted.double",
             begin: "\"",
             end: "\"",
+            contentName: "string.content.quoted.double",
             patterns: [
                 MatchRule(name: "source.test.03", match: #"\\\(.*\)"#, captures: [
                     Capture(patterns: [IncludeGrammarPattern()])
