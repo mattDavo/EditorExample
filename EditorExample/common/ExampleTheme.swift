@@ -45,6 +45,7 @@ let exampleTheme = Theme(name: "basic", settings: [
     ThemeSetting(scope: "source", parentScopes: [], attributes: [
         ColorThemeAttribute(color: .textColor),
         FontThemeAttribute(font: .monospacedSystemFont(ofSize: 18)),
+        LigatureThemeAttribute(ligature: 0),
         FirstLineHeadIndentThemeAttribute(value: 48),
         TailIndentThemeAttribute(value: -30),
         HeadIndentThemeAttribute(value: 30)
@@ -70,7 +71,7 @@ let exampleTheme = Theme(name: "basic", settings: [
         BackgroundColorThemeAttribute(color: .systemGreen, roundingStyle: .full)
     ]),
     ThemeSetting(scope: "hidden", parentScopes: [], attributes: [
-        HiddenThemeAttribute()
+        HiddenThemeAttribute(hidden: true, inSelectionScopeHidden: false)
     ]),
     ThemeSetting(scope: "markup.heading.1", parentScopes: [], attributes: [
         FontThemeAttribute(font: .monospacedSystemFont(ofSize: 25)),
@@ -87,6 +88,19 @@ let exampleTheme = Theme(name: "basic", settings: [
     ThemeSetting(scope: "markup.center", parentScopes: [], attributes: [
         BackgroundColorThemeAttribute(color: Color.gray, roundingStyle: .quarter),
         TextAlignmentThemeAttribute(value: .center)
+    ]),
+    ThemeSetting(scope: "markdown.link", parentScopes: [], attributes: [
+        HiddenThemeAttribute(hidden: true, inSelectionScopeHidden: false)
+    ]),
+    ThemeSetting(scope: "markdown.link.name", parentScopes: [], attributes: [
+        HiddenThemeAttribute(hidden: false, inSelectionScopeHidden: false),
+        ActionThemeAttribute(actionId: "", handler: { str, range in
+            
+        })
+    ]),
+    ThemeSetting(scope: "markdown.link.link", parentScopes: [], attributes: []),
+    ThemeSetting(scope: "markup.syntax", parentScopes: [], attributes: [
+        HiddenThemeAttribute(hidden: true, inSelectionScopeHidden: false)
     ])
 ])
 

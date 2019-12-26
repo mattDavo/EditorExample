@@ -49,15 +49,19 @@ let exampleGrammar = Grammar(
     ],
     repository: Repository(patterns: [
         "todo": MatchRule(name: "comment.keyword.todo", match: "TODO"),
-        "bold": MatchRule(name: "markup.bold", match: "\\*.*?\\*", captures: [
+        "bold": MatchRule(name: "markup.bold", match: "(\\*).*?(\\*)", captures: [
             Capture(patterns: [
                 IncludeRulePattern(include: "italic")
-            ])
+            ]),
+            Capture(name: "markup.syntax"),
+            Capture(name: "markup.syntax")
         ]),
-        "italic": MatchRule(name: "markup.italic", match: "_.*?_", captures: [
+        "italic": MatchRule(name: "markup.italic", match: "(_).*?(_)", captures: [
             Capture(patterns: [
                 IncludeRulePattern(include: "bold")
-            ])
+            ]),
+            Capture(name: "markup.syntax"),
+            Capture(name: "markup.syntax")
         ]),
         "mono": MatchRule(name: "markup.mono", match: "`.+?`", captures: [
             Capture(patterns: [

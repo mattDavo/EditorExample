@@ -44,7 +44,7 @@ Emojis are allowed 😊
         
         
         textView.insertionPointColor = .systemBlue
-        textView.string = lines
+        textView.string = bigText
         textView.replace(lineNumberGutter: LineNumberGutter(withTextView: textView))
         
         exampleGrammar.shouldDebug = true
