@@ -59,7 +59,7 @@ let exampleGrammar = Grammar(
                 IncludeRulePattern(include: "bold")
             ])
         ]),
-        "mono": MatchRule(name: "markup.mono", match: "`.*?`", captures: [
+        "mono": MatchRule(name: "markup.mono", match: "`.+?`", captures: [
             Capture(patterns: [
                 IncludeRulePattern(include: "bold"),
                 IncludeRulePattern(include: "italic")

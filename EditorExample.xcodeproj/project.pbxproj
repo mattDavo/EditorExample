@@ -16,12 +16,10 @@
 		343FED452397372F00612A26 /* EditorExampleUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 343FED442397372F00612A26 /* EditorExampleUITests.swift */; };
 		344E81EB239C6DEE00729654 /* WindowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 344E81EA239C6DEE00729654 /* WindowController.swift */; };
 		345091EB23A9D0C000145BB9 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 345091EA23A9D0C000145BB9 /* README.md */; };
-		346B8283239CA42E00D142E6 /* AdobeBlank.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 346B8282239CA42E00D142E6 /* AdobeBlank.ttf */; };
 		3480490A23A9D3D600CB83F2 /* EditorUI in Frameworks */ = {isa = PBXBuildFile; productRef = 3480490923A9D3D600CB83F2 /* EditorUI */; };
 		3480490E23A9D3D600CB83F2 /* EditorCore in Frameworks */ = {isa = PBXBuildFile; productRef = 3480490D23A9D3D600CB83F2 /* EditorCore */; };
 		3480491623A9D66000CB83F2 /* ExampleGrammar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3480491523A9D65F00CB83F2 /* ExampleGrammar.swift */; };
 		3480491923A9D67600CB83F2 /* ExampleTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3480491823A9D67600CB83F2 /* ExampleTheme.swift */; };
-		3480491B23A9D7C500CB83F2 /* Font+HiddentFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3480491A23A9D7C500CB83F2 /* Font+HiddentFont.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,11 +56,9 @@
 		343FED462397372F00612A26 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		344E81EA239C6DEE00729654 /* WindowController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WindowController.swift; sourceTree = "<group>"; };
 		345091EA23A9D0C000145BB9 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
-		346B8282239CA42E00D142E6 /* AdobeBlank.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = AdobeBlank.ttf; sourceTree = "<group>"; };
 		3480490F23A9D3E300CB83F2 /* Editor */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Editor; path = ../Editor; sourceTree = "<group>"; };
 		3480491523A9D65F00CB83F2 /* ExampleGrammar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExampleGrammar.swift; sourceTree = "<group>"; };
 		3480491823A9D67600CB83F2 /* ExampleTheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExampleTheme.swift; sourceTree = "<group>"; };
-		3480491A23A9D7C500CB83F2 /* Font+HiddentFont.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Font+HiddentFont.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -145,7 +141,6 @@
 		343FED52239737AB00612A26 /* macOS */ = {
 			isa = PBXGroup;
 			children = (
-				346B8282239CA42E00D142E6 /* AdobeBlank.ttf */,
 				343FED262397372D00612A26 /* AppDelegate.swift */,
 				343FED282397372D00612A26 /* ViewController.swift */,
 				344E81EA239C6DEE00729654 /* WindowController.swift */,
@@ -169,7 +164,6 @@
 			children = (
 				3480491523A9D65F00CB83F2 /* ExampleGrammar.swift */,
 				3480491823A9D67600CB83F2 /* ExampleTheme.swift */,
-				3480491A23A9D7C500CB83F2 /* Font+HiddentFont.swift */,
 				343E2FDC23AB79350058AC7E /* BigText.swift */,
 			);
 			path = common;
@@ -287,7 +281,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				343FED2B2397372E00612A26 /* Assets.xcassets in Resources */,
-				346B8283239CA42E00D142E6 /* AdobeBlank.ttf in Resources */,
 				345091EB23A9D0C000145BB9 /* README.md in Resources */,
 				343FED2E2397372E00612A26 /* Main.storyboard in Resources */,
 			);
@@ -316,7 +309,6 @@
 			files = (
 				343FED292397372D00612A26 /* ViewController.swift in Sources */,
 				344E81EB239C6DEE00729654 /* WindowController.swift in Sources */,
-				3480491B23A9D7C500CB83F2 /* Font+HiddentFont.swift in Sources */,
 				3480491923A9D67600CB83F2 /* ExampleTheme.swift in Sources */,
 				343E2FDD23AB79350058AC7E /* BigText.swift in Sources */,
 				3480491623A9D66000CB83F2 /* ExampleGrammar.swift in Sources */,

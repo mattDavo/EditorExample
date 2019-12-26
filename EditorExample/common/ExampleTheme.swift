@@ -30,7 +30,7 @@ let exampleTheme = Theme(name: "basic", settings: [
     ThemeSetting(scope: "entity", parentScopes: [], attributes: []),
     ThemeSetting(scope: "invalid", parentScopes: [], attributes: []),
     ThemeSetting(scope: "keyword", parentScopes: [], attributes: [
-        ColorThemeAttribute(color: .systemBlue)
+        ColorThemeAttribute(color: .systemBlue, inSelectionScopeColor: .systemRed)
     ]),
     ThemeSetting(scope: "markup", parentScopes: [], attributes: []),
     ThemeSetting(scope: "storage", parentScopes: [], attributes: []),
@@ -59,13 +59,18 @@ let exampleTheme = Theme(name: "basic", settings: [
         ItalicThemeAttribute()
     ]),
     ThemeSetting(scope: "markup.mono", parentScopes: [], attributes: [
-        BackgroundColorThemeAttribute(color: .gray, rounded: true),
+        BackgroundColorThemeAttribute(color: .gray, roundingStyle: .quarter),
     ]),
     ThemeSetting(scope: "action", parentScopes: [], attributes: [
-        ActionThemeAttribute(linkId: "test")
+        ActionThemeAttribute(actionId: "test", handler: { str, range  in
+            print("string: \(str)")
+            print("range: \(range)")
+        }),
+        UnderlineColorThemeAttribute(color: .clear),
+        BackgroundColorThemeAttribute(color: .systemGreen, roundingStyle: .full)
     ]),
     ThemeSetting(scope: "hidden", parentScopes: [], attributes: [
-        FontThemeAttribute(font: .hiddenFont())
+        HiddenThemeAttribute()
     ]),
     ThemeSetting(scope: "markup.heading.1", parentScopes: [], attributes: [
         FontThemeAttribute(font: .monospacedSystemFont(ofSize: 25)),
@@ -80,7 +85,7 @@ let exampleTheme = Theme(name: "basic", settings: [
         FirstLineHeadIndentThemeAttribute(value: 0)
     ]),
     ThemeSetting(scope: "markup.center", parentScopes: [], attributes: [
-        BackgroundColorThemeAttribute(color: Color.gray, rounded: true),
+        BackgroundColorThemeAttribute(color: Color.gray, roundingStyle: .quarter),
         TextAlignmentThemeAttribute(value: .center)
     ])
 ])
