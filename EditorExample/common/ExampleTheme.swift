@@ -30,7 +30,7 @@ let exampleTheme = Theme(name: "basic", settings: [
     ThemeSetting(scope: "entity", parentScopes: [], attributes: []),
     ThemeSetting(scope: "invalid", parentScopes: [], attributes: []),
     ThemeSetting(scope: "keyword", parentScopes: [], attributes: [
-        ColorThemeAttribute(color: .systemBlue, inSelectionScopeColor: .systemRed)
+        ColorThemeAttribute(color: .systemBlue)
     ]),
     ThemeSetting(scope: "markup", parentScopes: [], attributes: []),
     ThemeSetting(scope: "storage", parentScopes: [], attributes: []),
@@ -70,8 +70,10 @@ let exampleTheme = Theme(name: "basic", settings: [
         UnderlineColorThemeAttribute(color: .clear),
         BackgroundColorThemeAttribute(color: .systemGreen, roundingStyle: .full)
     ]),
-    ThemeSetting(scope: "hidden", parentScopes: [], attributes: [
-        HiddenThemeAttribute(hidden: true, inSelectionScopeHidden: false)
+    ThemeSetting(scope: "hidden", parentScopes: [], attributes: [], inSelectionAttributes: [
+        HiddenThemeAttribute(hidden: false)
+    ], outSelectionAttributes: [
+        HiddenThemeAttribute(hidden: true)
     ]),
     ThemeSetting(scope: "markup.heading.1", parentScopes: [], attributes: [
         FontThemeAttribute(font: .monospacedSystemFont(ofSize: 25)),
@@ -89,19 +91,46 @@ let exampleTheme = Theme(name: "basic", settings: [
         BackgroundColorThemeAttribute(color: Color.gray, roundingStyle: .quarter),
         TextAlignmentThemeAttribute(value: .center)
     ]),
-    ThemeSetting(scope: "markdown.link", parentScopes: [], attributes: [
-        HiddenThemeAttribute(hidden: true, inSelectionScopeHidden: false)
-    ]),
-    ThemeSetting(scope: "markdown.link.name", parentScopes: [], attributes: [
-        HiddenThemeAttribute(hidden: false, inSelectionScopeHidden: false),
-        ActionThemeAttribute(actionId: "", handler: { str, range in
-            
-        })
-    ]),
-    ThemeSetting(scope: "markdown.link.link", parentScopes: [], attributes: []),
-    ThemeSetting(scope: "markup.syntax", parentScopes: [], attributes: [
-        HiddenThemeAttribute(hidden: true, inSelectionScopeHidden: false)
-    ])
+    ThemeSetting(
+        scope: "markdown.link",
+        parentScopes: [],
+        attributes: [],
+        inSelectionAttributes: [
+            HiddenThemeAttribute(hidden: false)
+        ],
+        outSelectionAttributes: [
+            HiddenThemeAttribute(hidden: true)
+        ]
+    ),
+    ThemeSetting(
+        scope: "markdown.link.name",
+        parentScopes: [],
+        attributes: [
+            HiddenThemeAttribute(hidden: false),
+            ActionThemeAttribute(actionId: "", handler: { str, range in
+                
+            })
+        ],
+        outSelectionAttributes: [
+            HiddenThemeAttribute(hidden: false)
+        ]
+    ),
+    ThemeSetting(
+        scope: "markdown.link.link",
+        parentScopes: [],
+        attributes: []
+    ),
+    ThemeSetting(
+        scope: "markup.syntax",
+        parentScopes: [],
+        attributes: [],
+        inSelectionAttributes: [
+            HiddenThemeAttribute(hidden: false)
+        ],
+        outSelectionAttributes: [
+            HiddenThemeAttribute(hidden: true)
+        ]
+    )
 ])
 
 
