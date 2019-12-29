@@ -45,6 +45,7 @@ let exampleGrammar = Grammar(
         IncludeRulePattern(include: "italic"),
         IncludeRulePattern(include: "mono"),
         IncludeRulePattern(include: "test"),
+        IncludeRulePattern(include: "code-block"),
         BeginEndRule(name: "markup.center", begin: "^\\`center$", end: "^\\`$", patterns: [])
     ],
     repository: Repository(patterns: [
@@ -63,7 +64,7 @@ let exampleGrammar = Grammar(
             Capture(name: "markup.syntax"),
             Capture(name: "markup.syntax")
         ]),
-        "mono": MatchRule(name: "markup.mono", match: "`.+?`", captures: [
+        "mono": MatchRule(name: "markup.mono", match: "`[^`]+?`", captures: [
             Capture(patterns: [
                 IncludeRulePattern(include: "bold"),
                 IncludeRulePattern(include: "italic")
@@ -74,7 +75,8 @@ let exampleGrammar = Grammar(
             Capture(name: "Hello world"),
             Capture(name: "Hello"),
             Capture(name: "world")
-        ])
+        ]),
+        "code-block": BeginEndRule(name: "markup.code.block", begin: "^```$", end: "^```$", contentName: "markup.code.block.content", patterns: [])
     ])
 )
 

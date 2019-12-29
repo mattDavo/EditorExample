@@ -20,6 +20,7 @@
 		3480490E23A9D3D600CB83F2 /* EditorCore in Frameworks */ = {isa = PBXBuildFile; productRef = 3480490D23A9D3D600CB83F2 /* EditorCore */; };
 		3480491623A9D66000CB83F2 /* ExampleGrammar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3480491523A9D65F00CB83F2 /* ExampleGrammar.swift */; };
 		3480491923A9D67600CB83F2 /* ExampleTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3480491823A9D67600CB83F2 /* ExampleTheme.swift */; };
+		34868B4023B86F990049AA1A /* CodeBlock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34868B3F23B86F990049AA1A /* CodeBlock.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +60,7 @@
 		3480490F23A9D3E300CB83F2 /* Editor */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Editor; path = ../Editor; sourceTree = "<group>"; };
 		3480491523A9D65F00CB83F2 /* ExampleGrammar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExampleGrammar.swift; sourceTree = "<group>"; };
 		3480491823A9D67600CB83F2 /* ExampleTheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExampleTheme.swift; sourceTree = "<group>"; };
+		34868B3F23B86F990049AA1A /* CodeBlock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodeBlock.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -143,6 +145,7 @@
 			children = (
 				343FED262397372D00612A26 /* AppDelegate.swift */,
 				343FED282397372D00612A26 /* ViewController.swift */,
+				34868B3F23B86F990049AA1A /* CodeBlock.swift */,
 				344E81EA239C6DEE00729654 /* WindowController.swift */,
 				343FED2A2397372E00612A26 /* Assets.xcassets */,
 				343FED2C2397372E00612A26 /* Main.storyboard */,
@@ -308,6 +311,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				343FED292397372D00612A26 /* ViewController.swift in Sources */,
+				34868B4023B86F990049AA1A /* CodeBlock.swift in Sources */,
 				344E81EB239C6DEE00729654 /* WindowController.swift in Sources */,
 				3480491923A9D67600CB83F2 /* ExampleTheme.swift in Sources */,
 				343E2FDD23AB79350058AC7E /* BigText.swift in Sources */,

@@ -29,6 +29,10 @@ And string interpolation: \"\\(Wow cat dog)\"
 
 Links: [Hello](https://www.google.com)
 
+```
+setValue(300, type: .absoluteValueType, for: .width)
+```
+
 Testing out // comments
 
 This shouldn't be commented
@@ -44,7 +48,7 @@ Emojis are allowed 😊
         
         
         textView.insertionPointColor = .systemBlue
-        textView.string = bigText
+        textView.string = lines
         textView.replace(lineNumberGutter: LineNumberGutter(withTextView: textView))
         
         exampleGrammar.shouldDebug = true

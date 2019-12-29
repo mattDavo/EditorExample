@@ -48,7 +48,7 @@ let exampleTheme = Theme(name: "basic", settings: [
         LigatureThemeAttribute(ligature: 0),
         FirstLineHeadIndentThemeAttribute(value: 48),
         TailIndentThemeAttribute(value: -30),
-        HeadIndentThemeAttribute(value: 30)
+        HeadIndentThemeAttribute(value: 48)
     ]),
     ThemeSetting(scope: "comment.keyword", parentScopes: [], attributes: [
         ColorThemeAttribute(color: .systemTeal)
@@ -130,7 +130,10 @@ let exampleTheme = Theme(name: "basic", settings: [
         outSelectionAttributes: [
             HiddenThemeAttribute(hidden: true)
         ]
-    )
+    ),
+    ThemeSetting(scope: "markup.code.block", parentScopes: [], attributes: [
+        TextBlockThemeAttribute(textBlock: CodeBlock(leftIndentPadding: 48, rightIndentPadding: 30, backgroundColor: .gray, cornerRadius: 5))
+    ])
 ])
 
 
