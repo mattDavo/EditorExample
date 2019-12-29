@@ -16,6 +16,11 @@ let exampleGrammar = Grammar(
         MatchRule(name: "keyword.special.cat", match: "\\b[Cc]at\\b"),
         MatchRule(name: "keyword.special.dog", match: "\\b[Dd]og\\b"),
         MatchRule(name: "action", match: "\\B@[\\w]+(?!\\S)"),
+        MatchRule(name: "action", match: "\\B@(\\{)[\\w\\s]+(\\})(?!\\S)", captures: [
+            Capture(),
+            Capture(name: "action.syntax"),
+            Capture(name: "action.syntax")
+        ]),
         MatchRule(name: "markdown.link", match: "\\[(.*)\\]\\((.*)\\)", captures: [
             Capture(),
             Capture(name: "markdown.link.name"),

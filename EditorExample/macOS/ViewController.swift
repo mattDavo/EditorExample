@@ -49,6 +49,8 @@ Emojis are allowed 😊
         
         textView.insertionPointColor = .systemBlue
         textView.string = lines
+        textView.selectedTextAttributes.removeValue(forKey: .foregroundColor)
+        textView.linkTextAttributes?.removeValue(forKey: .foregroundColor)
         textView.replace(lineNumberGutter: LineNumberGutter(withTextView: textView))
         
         exampleGrammar.shouldDebug = true

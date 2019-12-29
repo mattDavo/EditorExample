@@ -68,8 +68,12 @@ let exampleTheme = Theme(name: "basic", settings: [
             print("range: \(range)")
         }),
         UnderlineColorThemeAttribute(color: .clear),
-        BackgroundColorThemeAttribute(color: .systemGreen, roundingStyle: .full)
+        BackgroundColorThemeAttribute(color: .systemPurple, roundingStyle: .full)
     ]),
+    ThemeSetting(scope: "action.syntax", parentScopes: [], attributes: [],
+         inSelectionAttributes: [HiddenThemeAttribute(hidden: false)],
+         outSelectionAttributes: [HiddenThemeAttribute()]
+    ),
     ThemeSetting(scope: "hidden", parentScopes: [], attributes: [], inSelectionAttributes: [
         HiddenThemeAttribute(hidden: false)
     ], outSelectionAttributes: [
