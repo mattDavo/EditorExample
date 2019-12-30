@@ -7,12 +7,14 @@
 //
 
 import Cocoa
+import EditorCore
 import EditorUI
 
 class ViewController: NSViewController {
 
     @IBOutlet var textView: EditorTextView!
     var editor: Editor!
+    var parser: Parser!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,13 +26,17 @@ class ViewController: NSViewController {
 
 @Keywords are dog, Dog, cat and Cat
 
+@{Hello world}
+
 You're allowed strings: "It's raining cats and dogs"
 And string interpolation: \"\\(Wow cat dog)\"
 
 Links: [Hello](https://www.google.com)
 
-```
-setValue(300, type: .absoluteValueType, for: .width)
+```Swift
+import EditorCore
+
+let grammar = Grammar(scopeName: "source.example")
 ```
 
 Testing out // comments
@@ -53,8 +59,9 @@ Emojis are allowed 😊
         textView.linkTextAttributes?.removeValue(forKey: .foregroundColor)
         textView.replace(lineNumberGutter: LineNumberGutter(withTextView: textView))
         
-        exampleGrammar.shouldDebug = true
-        editor = Editor(textView: textView, grammar: exampleGrammar, theme: exampleTheme)
+        parser = Parser(grammars: [exampleGrammar, basicSwiftGrammar])
+        parser.shouldDebug = true
+        editor = Editor(textView: textView, parser: parser, baseGrammar: exampleGrammar, theme: exampleTheme)
     }
     
     override var representedObject: Any? {

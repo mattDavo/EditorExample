@@ -39,8 +39,8 @@ let exampleGrammar = Grammar(
             end: "\"",
             contentName: "string.content.quoted.double",
             patterns: [
-                MatchRule(name: "source.test.03", match: #"\\\(.*\)"#, captures: [
-                    Capture(patterns: [IncludeGrammarPattern()])
+                MatchRule(name: "source.test.05.interpolation", match: #"\\\(.*\)"#, captures: [
+                    Capture(patterns: [IncludeGrammarPattern(scopeName: "source.test.05")])
                 ])
             ]
         ),
@@ -50,6 +50,7 @@ let exampleGrammar = Grammar(
         IncludeRulePattern(include: "italic"),
         IncludeRulePattern(include: "mono"),
         IncludeRulePattern(include: "test"),
+        IncludeRulePattern(include: "swift-code-block"),
         IncludeRulePattern(include: "code-block"),
         BeginEndRule(name: "markup.center", begin: "^\\`center$", end: "^\\`$", patterns: [])
     ],
@@ -81,7 +82,8 @@ let exampleGrammar = Grammar(
             Capture(name: "Hello"),
             Capture(name: "world")
         ]),
-        "code-block": BeginEndRule(name: "markup.code.block", begin: "^```$", end: "^```$", contentName: "markup.code.block.content", patterns: [])
+        "code-block": BeginEndRule(name: "markup.code.block", begin: "^```", end: "^```$", contentName: "markup.code.block.content", patterns: []),
+        "swift-code-block": BeginEndRule(name: "markup.code.block", begin: "^```[Ss]wift$", end: "^```$", contentName: "markup.code.block.content", patterns: [IncludeGrammarPattern(scopeName: "source.swift")])
     ])
 )
 
@@ -99,7 +101,7 @@ let readMeExampleGrammar = Grammar(
             end: "\"",
             patterns: [
                 MatchRule(name: "source.example", match: #"\\\(.*\)"#, captures: [
-                    Capture(patterns: [IncludeGrammarPattern()])
+                    Capture(patterns: [IncludeGrammarPattern(scopeName: "source.example")])
                 ])
             ]
         ),
@@ -108,6 +110,32 @@ let readMeExampleGrammar = Grammar(
     ],
     repository: Repository(patterns: [
         "todo": MatchRule(name: "comment.keyword.todo", match: "TODO")
+    ])
+)
+
+let basicSwiftGrammar = Grammar(
+    scopeName: "source.swift",
+    fileTypes: [],
+    patterns: [
+        MatchRule(name: "keyword.declarations", match: "\\b(associatedtype|class|deinit|enum|extension|fileprivate|func|import|init|inout|internal|let|open|operator|private|protocol|public|rethrows|static|struct|subscript|typealias|var)\\b"),
+        MatchRule(name: "keyword.statements", match: "\\b(break|case|continue|default|defer|do|else|fallthrough|for|guard|if|in|repeat|return|switch|where|while)\\b"),
+        MatchRule(name: "keyword.expressionsandtypes", match: "\\b(as|Any|catch|false|is|nil|super|self|Self|throw|throws|true|try)\\b"),
+        MatchRule(name: "keyword.patterns", match: "\\b_\\b"),
+        MatchRule(name: "keyword.pound", match: "\\b#(available|colorLiteral|column|else|elseif|endif|error|file|fileLiteral|function|if|imageLiteral|line|selector|sourceLocation|warning)\\b"),
+        MatchRule(name: "keyword.particularcontexts", match: "\\b(associativity|convenience|dynamic|didSet|final|get|infix|indirect|lazy|left|mutating|none|nonmutating|optional|override|postfix|precedence|prefix|Protocol|required|right|set|Type|unowned|weak|willSet)\\b"),
+        MatchRule(name: "numeric", match: "-?(?:(?:0b|0o|0x)?\\d+|\\d+\\.\\d+)"),
+        MatchRule(name: "bool", match: "(true|false)"),
+        MatchRule(name: "string.quoted.double", match: "\\\"(.*?)\\\"", captures: [
+            Capture(),
+            Capture(patterns: [
+                MatchRule(name: "source.swift", match: #"\\\(.*\)"#, captures: [
+                    Capture(),
+                    Capture(patterns: [IncludeGrammarPattern(scopeName: "source.swift")])
+                ])
+            ])
+        ]),
+    ], repository: Repository(patterns: [
+        :
     ])
 )
 

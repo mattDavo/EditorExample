@@ -136,7 +136,7 @@ let exampleTheme = Theme(name: "basic", settings: [
         ]
     ),
     ThemeSetting(scope: "markup.code.block", parentScopes: [], attributes: [
-        TextBlockThemeAttribute(textBlock: CodeBlock(leftIndentPadding: 48, rightIndentPadding: 30, backgroundColor: .gray, cornerRadius: 5))
+        TextBlockThemeAttribute(textBlock: CodeBlock(leftIndentPadding: 48, rightIndentPadding: 30, backgroundColor: .unemphasizedSelectedTextBackgroundColor, cornerRadius: 5))
     ])
 ])
 
