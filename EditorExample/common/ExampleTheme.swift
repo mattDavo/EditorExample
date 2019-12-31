@@ -92,7 +92,9 @@ let exampleTheme = Theme(name: "basic", settings: [
         FirstLineHeadIndentThemeAttribute(value: 0)
     ]),
     ThemeSetting(scope: "markup.center", parentScopes: [], attributes: [
-        BackgroundColorThemeAttribute(color: Color.gray, roundingStyle: .quarter),
+        BackgroundColorThemeAttribute(color: Color.gray, roundingStyle: .quarter, coloringStyle: .line),
+    ]),
+    ThemeSetting(scope: "markup.center.content", parentScopes: [], attributes: [
         TextAlignmentThemeAttribute(value: .center)
     ]),
     ThemeSetting(
@@ -136,7 +138,7 @@ let exampleTheme = Theme(name: "basic", settings: [
         ]
     ),
     ThemeSetting(scope: "markup.code.block", parentScopes: [], attributes: [
-        TextBlockThemeAttribute(textBlock: CodeBlock(leftIndentPadding: 48, rightIndentPadding: 30, backgroundColor: .unemphasizedSelectedTextBackgroundColor, cornerRadius: 5))
+        BackgroundColorThemeAttribute(color: .unemphasizedSelectedTextBackgroundColor, roundingStyle: .full, coloringStyle: .line)
     ])
 ])
 

@@ -20,6 +20,12 @@ And string interpolation: \"\\(Wow cat dog)\"
 
 Links: [Hello](https://www.google.com)
 
+```Swift
+import EditorCore
+
+let grammar = Grammar(scopeName: "source.example")
+```
+
 Testing out // comments
 
 This shouldn't be commented

@@ -52,7 +52,7 @@ let exampleGrammar = Grammar(
         IncludeRulePattern(include: "test"),
         IncludeRulePattern(include: "swift-code-block"),
         IncludeRulePattern(include: "code-block"),
-        BeginEndRule(name: "markup.center", begin: "^\\`center$", end: "^\\`$", patterns: [])
+        BeginEndRule(name: "markup.center", begin: "^\\`center\n$", end: "^\\`$", contentName: "markup.center.content", patterns: [])
     ],
     repository: Repository(patterns: [
         "todo": MatchRule(name: "comment.keyword.todo", match: "TODO"),
