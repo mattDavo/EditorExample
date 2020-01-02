@@ -134,8 +134,9 @@ let basicSwiftGrammar = Grammar(
                 ])
             ])
         ]),
+        BeginEndRule(name: "comment.line.double-slash.swift", begin: "//", end: "\\n", patterns: [IncludeRulePattern(include: "todo")]),
+        BeginEndRule(name: "comment.block", begin: "/\\*", end: "\\*/", patterns: [IncludeRulePattern(include: "todo")]),
     ], repository: Repository(patterns: [
-        :
+        "todo": MatchRule(name: "comment.keyword.todo", match: "TODO")
     ])
 )
-
