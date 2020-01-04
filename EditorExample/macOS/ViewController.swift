@@ -62,6 +62,12 @@ Emojis are allowed 😊
         parser = Parser(grammars: [exampleGrammar, basicSwiftGrammar])
         parser.shouldDebug = true
         editor = Editor(textView: textView, parser: parser, baseGrammar: exampleGrammar, theme: exampleTheme)
+        
+        editor.subscribe(toToken: "action") { (res) in
+            for (str, range) in res {
+                print(str, range)
+            }
+        }
     }
     
     override var representedObject: Any? {

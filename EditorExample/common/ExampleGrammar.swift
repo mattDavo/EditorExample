@@ -10,7 +10,7 @@ import Foundation
 import EditorCore
 
 let exampleGrammar = Grammar(
-    scopeName: "source.test.05",
+    scopeName: "source.example",
     fileTypes: [],
     patterns: [
         MatchRule(name: "keyword.special.cat", match: "\\b[Cc]at\\b"),
@@ -33,17 +33,15 @@ let exampleGrammar = Grammar(
         MatchRule(name: "markup.heading.1", match: "^#( .*|)$"),
         MatchRule(name: "markup.heading.2", match: "^##( .*|)$"),
         MatchRule(name: "markup.heading.3", match: "^###( .*|)$"),
-        BeginEndRule(
-            name: "string.quoted.double",
-            begin: "\"",
-            end: "\"",
-            contentName: "string.content.quoted.double",
-            patterns: [
-                MatchRule(name: "source.test.05.interpolation", match: #"\\\(.*\)"#, captures: [
-                    Capture(patterns: [IncludeGrammarPattern(scopeName: "source.test.05")])
+        MatchRule(name: "string.quoted.double", match: "\\\"(.*?)\\\"", captures: [
+            Capture.none,
+            Capture(patterns: [
+                MatchRule(name: "source.example.interpolation", match: #"\\\((.*?)\)"#, captures: [
+                    Capture.none,
+                    Capture(patterns: [IncludeGrammarPattern(scopeName: "source.example")])
                 ])
-            ]
-        ),
+            ])
+        ]),
         BeginEndRule(name: "comment.line.double-slash", begin: "//", end: "\\n", patterns: [IncludeRulePattern(include: "todo")]),
         BeginEndRule(name: "comment.block", begin: "/\\*", end: "\\*/", patterns: [IncludeRulePattern(include: "todo")]),
         IncludeRulePattern(include: "bold"),
@@ -128,7 +126,7 @@ let basicSwiftGrammar = Grammar(
         MatchRule(name: "string.quoted.double", match: "\\\"(.*?)\\\"", captures: [
             Capture(),
             Capture(patterns: [
-                MatchRule(name: "source.swift", match: #"\\\(.*\)"#, captures: [
+                MatchRule(name: "source.swift", match: #"\\\((.*?)\)"#, captures: [
                     Capture(),
                     Capture(patterns: [IncludeGrammarPattern(scopeName: "source.swift")])
                 ])
