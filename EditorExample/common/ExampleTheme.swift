@@ -67,7 +67,7 @@ let exampleTheme = Theme(name: "basic", settings: [
             print("string: \(str)")
             print("range: \(range)")
         }),
-        UnderlineColorThemeAttribute(color: .clear),
+        UnderlineThemeAttribute(color: .clear),
         BackgroundColorThemeAttribute(color: .systemPurple, roundingStyle: .full)
     ]),
     ThemeSetting(scope: "action.syntax", parentScopes: [], attributes: [],
