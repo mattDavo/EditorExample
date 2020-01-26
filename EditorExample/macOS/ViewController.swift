@@ -57,10 +57,10 @@ Emojis are allowed 😊
         textView.string = bigText
         textView.selectedTextAttributes.removeValue(forKey: .foregroundColor)
         textView.linkTextAttributes?.removeValue(forKey: .foregroundColor)
-        textView.replace(lineNumberGutter: LineNumberGutter(withTextView: textView))
+//        textView.replace(lineNumberGutter: LineNumberGutter(withTextView: textView))
         
         parser = Parser(grammars: [exampleGrammar, basicSwiftGrammar])
-        parser.shouldDebug = true
+        parser.shouldDebug = false
         editor = Editor(textView: textView, parser: parser, baseGrammar: exampleGrammar, theme: exampleTheme)
         
         editor.subscribe(toToken: "action") { (res) in
